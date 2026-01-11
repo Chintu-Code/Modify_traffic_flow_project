@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Flow Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🚦 Traffic Flow Simulation</h1>
+    <div id="digitalClock" class="clock"></div>
+
+    <div class="panels">
+      <div class="panel insert">
+        <h2>Vehicle Insertion</h2>
+        <input id="vid" type="number" placeholder="Vehicle ID">
+        <input id="vtype" placeholder="Vehicle Type" readonly>
+        <div class="vehicle-preview">
+  <img id="vehicleImg" src="images/img.jpg" alt="vehicle" />
+</div>
+
+        <select id="vpriority">
+          <option value="0">Normal</option>
+          <option value="1">VIP</option>
+          <option value="2">Emergency</option>
+        </select>
+        <button onclick="addVehicle()">Insert Vehicle</button>
+      </div>
+
+      <div class="panel remove">
+        <h2>Vehicle Deletion</h2>
+        <button onclick="removeVehicle()">Remove (Dequeue)</button>
+      </div>
+
+      <div class="panel reset">
+        <h2>Reset Queue</h2>
+        <button onclick="resetQueue()">Reset All Data</button>
+      </div>
+    </div>
+
+    <h2 id="congestion" class="low">Traffic: LOW</h2>
+    <div id="message" class="msg"></div>
+
+    <div class="tables">
+      <div class="table-container">
+        <h3>🚗 Current Queue</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Arrival</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <h3>✅ Served / Deleted Vehicles</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Wait Time</th>
+            </tr>
+          </thead>
+          <tbody id="servedBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <pre id="log"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
