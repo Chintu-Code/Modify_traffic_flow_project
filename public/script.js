@@ -19,7 +19,7 @@ const imageMap = {
   "VIP_Car": "images/vip-car.png"
 };
 
-const vehicleTypes = ["Car", "Bus", "Bike", "Schooter", "Schooty", "Ambulance", "Fire_Brigade", "VIP_Car"];
+const vehicleTypes = ["Car", "Bus", "Bike", "Schooter", "Schooty", "Ambulance","Ambulance", "Fire_Brigade","Fire_Brigade", "VIP_Car","VIP_Car"];
 const priorityMap = {
   "Car": 0,
   "Bus": 0,
